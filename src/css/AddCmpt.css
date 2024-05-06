@@ -1,0 +1,133 @@
+body{
+    width: 100%;
+}
+.pg{
+    display: flex;
+    background-color: #FFFFFF;
+    width:102%;   
+}
+.pg form{
+  
+    background-image: url(../images//AddBg.svg);
+    background-repeat: no-repeat;
+   background-size: contain;
+    width: 65%;
+height: fit-content;
+margin: 150px 13%;
+border-radius: 30px ;
+border: 0.5px 0px 0px 0px;
+opacity: 0px;
+border: 0.5px solid #594E4E;
+box-shadow: 0px 4px 20px 1px #00000040;
+padding-bottom: 60px;
+}
+.pg span{
+    margin-top: 30px;
+}
+.pg button{
+    margin-top: 45px;
+}
+ .nom, .prenom, .mail, .role, .pd, .confpd, .respn, .adr, .tel, .id, .desc, .chap, .artc,.quant{
+    width: 17.1em;
+    height: auto;
+    border-bottom: 2px solid;
+   border-color:linear-gradient(0deg, #282626, #282626) ;
+   margin: 2em auto;
+   display: flex;
+   align-items: center;
+  
+}
+
+input{
+    background-color: transparent;
+   
+   
+}
+.flx1, .flx2, .flx3{
+    display: flex;
+}
+.flx2{
+    margin-left: 150px;
+}
+ .flx3{
+    margin-left: 100px;
+}
+.profileImg{
+    width: 100px;
+height: 100px;
+border-radius: 100px;
+border: 5px solid #01C7BE
+
+}
+.modif img {
+    width: 18px;
+    height: 18px;
+    border-radius: 1px;
+  
+}
+.modif{
+    position: relative;
+    background-color: #FFFFFF;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+margin-top: -40px;
+margin-left: 60px;
+border: 1px solid #01C7BE;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+h6{
+    font-family: Inter;
+    font-size: 1.06em;
+    font-weight: 400;
+    line-height: 24.2px;
+    text-align: left;
+    color: #000000;
+}
+.inpt{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #F8F9FF;
+    box-shadow: 0px 4px 4px 0px #0000000D;
+    width: 300px;
+    height: 58px;
+    border-radius: 10px ;
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: 400;  
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.lft{
+    margin-right: 100px;
+}
+
+ .nomf{
+    height: 160px;
+    border-bottom: 2px solid;
+   border-color:linear-gradient(0deg, #282626, #282626) ;
+   margin-top:-2em ;
+   margin-right: auto;
+   display: flex;
+   align-items: center;
+ } 
+ textarea{
+    width: 300px;
+    height:50%;
+    background-color: transparent;
+    border: none;
+    margin-bottom: -50px;
+
+ }
+ .nf{
+    border-bottom: 2px solid;
+    border-color:linear-gradient(0deg, #282626, #282626) ;
+    align-self: center;
+   
+    display: flex;
+    align-items: center; 
+ }
+
