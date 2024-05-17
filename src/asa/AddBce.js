@@ -76,6 +76,43 @@ const AddBce = () => {
         });
     };
     
+    
+
+
+    const handleSelect = (productName, quantity) => {
+      // Send the product name and quantity to the backend
+      fetch('http://localhost:3001/select', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ productName, quantity }), // Include quantity here
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to select product');
+        }
+        console.log('Product selected successfully');
+      })
+      .catch(error => {
+        console.error('Error selecting product:', error);
+      });
+    };
+    
+
+
+
+
+
+        
+    
+
+
+
+
+
+
+
 
    
   
@@ -319,7 +356,7 @@ const fetchPara = async () => {
             return (
               <>
               <div className="change">
-              <button className="slct">Select</button>
+              <button className="slct" onClick={() => handleSelect(cellValues.row.name, cellValues.row.quantity)}>Select</button>
               </div>
               </>
             );
@@ -502,7 +539,7 @@ const fetchPara = async () => {
        <button className="close-modal" onClick={toggleModal}>
          Annuler
         </button>
-        <button className="cnr"> Confirmer</button>
+        <button className="cnr"  > Confirmer</button>
         </div>
       </div>
     </div>

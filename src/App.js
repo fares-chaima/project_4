@@ -3,12 +3,15 @@ import './App.css';
 import MinNavBar from "./MinNavBar";
 
 import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Accueil from './Accueil';
 import AddCmpt from './AddCmpt';
 import AddFourn from './AddFourn';
 import AddStructure from './AddStructure';
 import Admin from './Admin';
 import AfficherComptes from './AfficherComptes';
+import Bnreception from './Bnreception';
 import CodeConf from './CodeConf';
 import Contact from './Contact';
 import Fournisseurs from './Fournisseur';
@@ -24,16 +27,17 @@ import AddChapitre from './asa/AddChapitre';
 import AddProduit from './asa/AddProduit';
 import Articles from './asa/Articles';
 import Chapitres from './asa/Chapitres';
-import Modifchapitre from './asa/Modifchapitre';
-import Modifarticle from './asa/Modifarticle';
-import Modifprod from './asa/Modifprod';
 import ListeBce from './asa/ListeBce';
 import MinNavBarAsa from './asa/MinNavBarAsa';
+import Modbc from './asa/Modbc';
 import ModifAsa from './asa/ModifAsa';
+import Modifarticle from './asa/Modifarticle';
+import Modifchapitre from './asa/Modifchapitre';
+import Modifprod from './asa/Modifprod';
 import Produits from './asa/Produits';
+
 import ServiceAchat from './asa/ServiceAchat';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import Sidebnr from './asa/Sidebnr';
 
 function App() {
   return (
@@ -86,6 +90,9 @@ function App() {
         <Structure />
       </Route>
 
+     
+
+
       <Route path="/Fournisseurs" >
       <MinNavBar />
         <Fournisseurs />
@@ -114,6 +121,13 @@ function App() {
        <Route path="/ServiceAchat">
         <ServiceAchat />
        </Route>
+
+       <Route path="/Modifband/:id">
+        <Modbc />
+       </Route>
+
+
+
 
        <Route path="/Produits">
         <MinNavBarAsa />
@@ -144,7 +158,16 @@ function App() {
         <MinNavBarAsa />
         <AddChapitre />
        </Route>
-
+       <Route exact path="/Bnreception">
+        <MinNavBar  className=''/>
+        <div className='align'>
+        <Sidebnr/>
+        <Bnreception  />
+       
+        </div>
+        
+       
+        </Route>
        <Route path="/ModifAsa">
         <MinNavBarAsa />
         <ModifAsa />
